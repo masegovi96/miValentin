@@ -1,0 +1,74 @@
+body{
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color:white;
+    overflow: hidden;
+}
+.container{
+    margin-top: 10vh;
+}
+.btn-container{
+    position: relative;
+    margin-top: 20px;
+}
+.btn-move{
+    position: absolute;
+}
+.btn-lg{
+    font-size: 2rem;
+    padding: 15px 30px;
+}
+@keyframes heart-fall{
+    0%{
+        transform: translateY(-100vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
+.heart{
+    position: absolute;
+    color:red;
+    font-size: 30px;
+    animation: heart-fall 5s linear infinite;
+}
+.hidden{
+    display: none;
+}
+.title{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+#funny-img{
+    border-radius: 2.5rem;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+.scrolling-text{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: black;
+    color: yellow;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+@keyframes scroll-up{
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(-200vh);
+    }
+}
+.scrolling-text p{
+    width: 60%;
+    animation: scroll-up 20s linear forwards;
+}
