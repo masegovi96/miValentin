@@ -5,7 +5,7 @@ setTimeout(() => {
 }, 11000);
 
 document.getElementById('yes-btn').addEventListener('click', function() {
-    document.getElementById('funny-img').src = '../media/img/perrito-corazon.jpg';
+    document.getElementById('funny-img').src = 'https://i.pinimg.com/736x/a8/c3/95/a8c395ab6e9f3ca01c7c2d9ffc33bb86.jpg';
     document.getElementById('funny-img').classList.remove('hidden');
     document.getElementById('buttons').style.display = 'none';
 });
