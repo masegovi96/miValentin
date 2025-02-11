@@ -5,13 +5,33 @@ body{
     color:white;
     overflow: hidden;
 }
+.start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .container{
     margin-top: 10vh;
 }
-.btn-container{
+.title-container{
     position: relative;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.btn-container{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    position: relative;
+}
+.btn-yes{
+    display:inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+
 .btn-move{
     position: absolute;
 }
@@ -31,7 +51,7 @@ body{
     position: absolute;
     color:red;
     font-size: 30px;
-    animation: heart-fall 5s linear infinite;
+    animation: heart-fall 1s linear infinite;
 }
 .hidden{
     display: none;
@@ -43,6 +63,7 @@ body{
 #funny-img{
     border-radius: 2.5rem;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    margin: 20px auto;
 }
 .scrolling-text{
     position: absolute;
@@ -70,5 +91,40 @@ body{
 }
 .scrolling-text p{
     width: 60%;
-    animation: scroll-up 20s linear forwards;
+    animation: scroll-up 45s linear forwards;
+}
+
+@keyframes fadeInScale{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInMove{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#funny-img{
+    animation: fadeInScale 1s ease-out;
+}
+
+#love-text{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.animated-text{
+    animation: fadeInMove 1s ease-out;
 }
